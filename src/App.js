@@ -1,13 +1,8 @@
 import React from 'react';
 import logo from "./images/logo.png"
-import styled from 'styled-components';
-const List= styled.ul`
-display: flex;
-`
-const Item=styled.li`
-margin-right: 40px;
-font-size: 12px;
-`
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+
 const navLinks=[
   {id:"1",label:"KNOW-HOW"},
   {id:"2",label:"O NAS"},
@@ -19,18 +14,9 @@ function App() {
   return (
     <div className='App'>
         <img src={logo} alt="logo"/>
-      <nav>
-      <List>
-        {navLinks.map(({id,label})=>{
-          return (<Item key={id}>
-            <a href="/">{label}</a>
-            </Item>)
-        })}
-       
-      </List>
-      </nav>
+        <Navigation links={navLinks}/>
+        <Footer/>
       </div>
   );
 }
-
 export default App;
