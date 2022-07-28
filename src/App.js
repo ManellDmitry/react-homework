@@ -10,6 +10,7 @@ const navLinks = [
   { id: "3", label: "BLOG" },
   { id: "4", label: "KONTAKT" },
 ];
+
 const PageWrapper = styled.div`
   display: flex;
   height: 100vh;
@@ -25,4 +26,5 @@ function App() {
     </PageWrapper>
   );
 }
+
 export default App;

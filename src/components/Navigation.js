@@ -8,8 +8,8 @@ const List = styled.ul`
 const Item = styled.li`
   margin-right: 40px;
   font-size: 12px;
-  :hover {
-    background-color: aqua;
+  a:hover {
+    color: aqua;
     transition: 1s ease;
   }
 `;

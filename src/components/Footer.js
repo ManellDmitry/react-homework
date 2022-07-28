@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "./styledComponents";
+
 const StyledFooter = styled.footer`
   flex: 0 1 auto;
 `;
+
 const StyledFooterLinks = styled.a`
   :hover {
     color: aquamarine;
@@ -12,10 +14,12 @@ const StyledFooterLinks = styled.a`
   font-size: 64px;
   display: inline-block;
 `;
-const StyledParags = styled.p`
+
+const StyledFooterSubTitle = styled.p`
   color: #fff;
   font-size: 10px;
 `;
+
 const StyledAdress = styled.address`
   color: #fff;
   font-size: 20px;
@@ -25,7 +29,9 @@ function Footer() {
   return (
     <StyledFooter>
       <Container>
-        <StyledParags>umów się na bezpłatną konsultację</StyledParags>
+        <StyledFooterSubTitle>
+          umów się na bezpłatną konsultację
+        </StyledFooterSubTitle>
         <ul>
           <li>
             <StyledFooterLinks href="mailto:hello@leanspin.pl">
@@ -46,4 +52,5 @@ function Footer() {
     </StyledFooter>
   );
 }
+
 export default Footer;
