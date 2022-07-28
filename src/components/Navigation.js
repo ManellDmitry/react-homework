@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+
 const List = styled.ul`
   display: flex;
 `;
+
 const Item = styled.li`
   margin-right: 40px;
   font-size: 12px;
@@ -11,6 +13,7 @@ const Item = styled.li`
     transition: 1s ease;
   }
 `;
+
 function Navigation({ links }) {
   return (
     <nav>
@@ -25,4 +28,5 @@ function Navigation({ links }) {
     </nav>
   );
 }
+
 export default Navigation;

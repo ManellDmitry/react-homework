@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "./styledComponents";
 const StyledFooter = styled.footer``;
 const StyledFooterLinks = styled.a`
   :hover {
@@ -21,6 +22,7 @@ const StyledAdress = styled.address`
 function Footer() {
   return (
     <StyledFooter>
+      <Container>
       <StyledParags>umów się na bezpłatną konsultację</StyledParags>
       <ul>
         <li>
@@ -38,6 +40,7 @@ function Footer() {
         <p>Studio LEANSPIN, Gałczyńskiego 33</p>
         <p>52-214 Wrocław, Polska</p>
       </StyledAdress>
+      </Container>
     </StyledFooter>
   );
 }
