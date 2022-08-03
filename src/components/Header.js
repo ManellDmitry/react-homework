@@ -20,7 +20,7 @@ function Header({ links }) {
     <StyledHeader>
       <HeaderContainer>
         <Logo />
-        <Navigation links={links} />
+        <Navigation x={links} />
       </HeaderContainer>
     </StyledHeader>
   );

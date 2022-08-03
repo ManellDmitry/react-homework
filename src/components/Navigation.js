@@ -14,14 +14,24 @@ const Item = styled.li`
   }
 `;
 
-function Navigation({ links }) {
+function Navigation({ x }) {
+  const handleItemClick = () => {};
+  const handleLinkClick = (e) => {};
+  const handleLinkMouseEnter = (e) => {};
+
   return (
     <nav>
       <List>
-        {links &&
-          links.map(({ id, label }) => (
-            <Item key={id}>
-              <a href="/">{label}</a>
+        {x &&
+          x.map(({ id, label }) => (
+            <Item key={id} onClick={handleItemClick}>
+              <a
+                to=""
+                onClick={handleLinkClick}
+                onMouseEnter={handleLinkMouseEnter}
+              >
+                {label}
+              </a>
             </Item>
           ))}
       </List>
