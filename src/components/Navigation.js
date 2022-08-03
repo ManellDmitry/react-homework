@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import styled from "styled-components";
-
+import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 const List = styled.ul`
   display: flex;
 `;
@@ -23,18 +25,19 @@ function Navigation({ x }) {
     <nav>
       <List>
         {x &&
-          x.map(({ id, label }) => (
+          x.map(({ id, label, path }) => (
             <Item key={id} onClick={handleItemClick}>
-              <a
-                to=""
+              <Link
+                to={`/${path}`}
                 onClick={handleLinkClick}
                 onMouseEnter={handleLinkMouseEnter}
               >
                 {label}
-              </a>
+              </Link>
             </Item>
           ))}
       </List>
+      <Outlet />
     </nav>
   );
 }

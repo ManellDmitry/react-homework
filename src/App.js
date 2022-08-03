@@ -11,10 +11,10 @@ import { Kontakt } from "./pages/Kontakt";
 import { O_Nas } from "./pages/O_Nas";
 
 const navLinks = [
-  { id: "1", label: "KNOW-HOW" },
-  { id: "2", label: "O NAS" },
-  { id: "3", label: "BLOG" },
-  { id: "4", label: "KONTAKT" },
+  { id: "1", label: "KNOW-HOW", path: "know-how" },
+  { id: "2", label: "O NAS", path: "o-nas" },
+  { id: "3", label: "BLOG", path: "blog" },
+  { id: "4", label: "KONTAKT", path: "kontakt" },
 ];
 
 const PageWrapper = styled.div`
@@ -29,11 +29,11 @@ function App() {
       <Header links={navLinks} />
       <main>
         <Routes>
-          <Route element={<Home />}></Route>
-          <Route element={<Know_How />}></Route>
-          <Route element={<O_Nas />}></Route>
-          <Route element={<Blog />}></Route>
-          <Route element={<Kontakt />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="know-how" element={<Know_How />} />
+          <Route path="o-nas" element={<O_Nas />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="kontakt" element={<Kontakt />} />
         </Routes>
         <Hero />
         <Footer name="Dima" />
