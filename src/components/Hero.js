@@ -25,6 +25,7 @@ const StyledMainTitle = styled.h1`
     display: block;
   }
 `;
+
 const TitleWrapper = styled.div`
   background-image: url(${img});
   background-repeat: no-repeat;
@@ -32,6 +33,16 @@ const TitleWrapper = styled.div`
   padding-top: 178px;
   padding-bottom: 210px;
 `;
+
+const PostTitle=styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding-top: 38px;
+padding-bottom: 80px;
+`
+
 
 function Hero() {
   return (
@@ -42,6 +53,12 @@ function Hero() {
           [re]designing <span className="title">your business</span>
         </StyledMainTitle>
       </TitleWrapper>
+      <PostTitle>
+      <p className="hero_styled_posttitle">Pomagamy rozwijać progresywne firmy, zespoły<br/>
+        i kompetencje w coraz szybciej zmieniającym się świecie.</p>
+      <p>Poznajmy się!<br/><span className="hero_posttitle_span">Umów się na bezpłatną konsultację</span>
+      </p>
+      </PostTitle>
     </HeroContainer>
   );
 }
