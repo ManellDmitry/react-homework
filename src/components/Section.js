@@ -23,16 +23,13 @@ font-size: 16px;
 const SectionContainer = styled(Container)`
 background-color: #fff;
 `
-const StyledWpapperSection =styled.div`
 
-`
 
 export function Section() {
     return(
-        <SectionContainer>
+            <SectionContainer>
         <section className="section_help">
     <StyledSectionTitle>Jak możemy pomóc</StyledSectionTitle>
-    <StyledWpapperSection>
     <ul>
         <li>
             <StyledSectionMainSubtitles>Transformacje</StyledSectionMainSubtitles>
@@ -55,9 +52,7 @@ export function Section() {
             <a href="/"><img src={arrow} alt="arrow"/></a>
         </li>
     </ul>
-    </StyledWpapperSection>
         </section>
-
         </SectionContainer>
     )
 }

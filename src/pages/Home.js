@@ -1,5 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
+const HiddenTitle= styled.h1`
+visibility: hidden;
+`
 export function Home() {
-  return <h1>Home</h1>;
+  return <HiddenTitle>Home</HiddenTitle>;
 }
