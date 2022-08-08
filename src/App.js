@@ -10,7 +10,7 @@ import { Blog } from "./pages/B_Blog";
 import { Know_How } from "./pages/Know_How";
 import { Kontakt } from "./pages/Kontakt";
 import { O_Nas } from "./pages/O_Nas";
-
+import  SectionONas  from "./components/SectionO_nas";
 const navLinks = [
   { id: "1", label: "KNOW-HOW", path: "know-how" },
   { id: "2", label: "O NAS", path: "o-nas" },
@@ -38,6 +38,7 @@ function App() {
         </Routes>
         <Hero />
         <Section/>
+        <SectionONas/>
         <Footer name="Dima" />
       </main>
     </PageWrapper>
