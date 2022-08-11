@@ -11,6 +11,10 @@ import { Know_How } from "./pages/Know_How";
 import { Kontakt } from "./pages/Kontakt";
 import { O_Nas } from "./pages/O_Nas";
 import  SectionONas  from "./components/SectionO_nas";
+
+// import {AppContext} from "./contexts/AppContext"
+
+
 const navLinks = [
   { id: "1", label: "KNOW-HOW", path: "know-how" },
   { id: "2", label: "O NAS", path: "o-nas" },
@@ -25,10 +29,12 @@ const PageWrapper = styled.div`
 `;
 
 function App() {
+  // const context= useContext(AppContext)
   return (
-    <PageWrapper>
+  //  <AppContext.Provider value={context}>
+ <PageWrapper>
       <Header links={navLinks} />
-      <main>
+      <main >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="know-how" element={<Know_How />} />
@@ -42,6 +48,7 @@ function App() {
         <Footer name="Dima" />
       </main>
     </PageWrapper>
+  //  </AppContext.Provider>
   );
 }
 

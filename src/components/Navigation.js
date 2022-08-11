@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+
 const List = styled.ul`
   display: flex;
 `;
@@ -31,9 +33,10 @@ function Navigation({ x }) {
                 to={`/${path}`}
                 onClick={handleLinkClick}
                 onMouseEnter={handleLinkMouseEnter}
-              >
+                >
                 {label}
               </Link>
+              
             </Item>
           ))}
       </List>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "./styledComponents";
 import arrow from "../images/arrow.png"
 
-const StyledSectionTitle= styled.h2`
+const StyledSectionTitle= styled.h3`
 color: #E8244F;
 font-size: 10px;
 line-height: 3.4;

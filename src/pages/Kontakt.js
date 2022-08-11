@@ -1,5 +1,12 @@
 import React from "react";
-
+import {Button} from "../components/Button";
 export function Kontakt() {
-  return <h1>KONTAKT</h1>;
+  
+  return (
+    <>
+        <Button label="click"/>
+        <Button label="click click"/>
+    </>
+  )
+  
 }
