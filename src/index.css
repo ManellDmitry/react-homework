@@ -30,9 +30,8 @@ h3 {
   text-decoration: none;
   color: inherit;
   color: #fff;
-  
 }
-a{
+a {
   display: inline-block;
 }
 body {
@@ -42,18 +41,18 @@ address {
   font-style: normal;
   font-size: 20px;
 }
-.hero_styled_posttitle{
+.hero_styled_posttitle {
   font-size: 20px;
   font-weight: 400;
   width: 509px;
-  line-height: 1,371;
+  line-height: 1, 371;
 }
-.hero_posttitle_span{
+.hero_posttitle_span {
   font-size: 11px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.4);
 }
-.section_help{
+.section_help {
   padding-top: 86px;
   padding-bottom: 163px;
 }

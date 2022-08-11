@@ -4,7 +4,6 @@ import Logo from "./Logo";
 import styled from "styled-components";
 import { Container } from "./styledComponents";
 
-
 const StyledHeader = styled.header`
   background: #000;
   flex: 0 1 auto;
