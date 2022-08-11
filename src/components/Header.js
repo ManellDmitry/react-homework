@@ -21,7 +21,6 @@ function Header({ links }) {
     <StyledHeader>
       <HeaderContainer>
         <Logo />
-        
         <Navigation x={links} />
       </HeaderContainer>
     </StyledHeader>

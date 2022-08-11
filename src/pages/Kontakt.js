@@ -1,12 +1,21 @@
 import React from "react";
-import {Button} from "../components/Button";
+import {Button, Link} from "../components/Button";
+
+
 export function Kontakt() {
-  
+  const handleButtonClick=()=>{
+
+  }
+  const handleLinkButtonClick=()=>{
+    
+  }
   return (
-    <>
-        <Button label="click"/>
-        <Button label="click click"/>
-    </>
+    
+        <div style={{display:"flex", alignItems: "center"}}>
+        <Button label="Sandra" handleClick={handleButtonClick}/>
+        <Link label="Tania" handleClick={handleLinkButtonClick}/>
+        </div>
+   
   )
   
 }

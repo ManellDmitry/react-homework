@@ -32,6 +32,9 @@ h3 {
   color: #fff;
   
 }
+a{
+  display: inline-block;
+}
 body {
   background: #000;
 }

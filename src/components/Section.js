@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "./styledComponents";
-import arrow from "../images/arrow.png"
+import { Icon } from "./Icon";
 
 const StyledSectionTitle= styled.h3`
 color: #E8244F;
@@ -34,22 +34,22 @@ export function Section() {
         <li>
             <StyledSectionMainSubtitles>Transformacje</StyledSectionMainSubtitles>
             <StyledSectionSecondSubTitles>Agile・Lean・Brand・Digital innovation</StyledSectionSecondSubTitles>
-            <a href="/"><img src={arrow} alt="arrow"/></a>
+            <Icon iconId="arrow"/>
         </li>
         <li>
             <StyledSectionMainSubtitles>Wsparcie</StyledSectionMainSubtitles>
             <StyledSectionSecondSubTitles>Doradztwo ・Narzędzia ・Coaching menedżerski</StyledSectionSecondSubTitles>
-            <a href="/"><img src={arrow} alt="arrow"/></a>
+            <Icon iconId="arrow"/>
         </li>
         <li>
             <StyledSectionMainSubtitles>Rozwój</StyledSectionMainSubtitles>
             <StyledSectionSecondSubTitles>Warsztaty・Symulacje ・Szkolenia hybrydowe</StyledSectionSecondSubTitles>
-            <a href="/"><img src={arrow} alt="arrow"/></a>
+            <Icon iconId="arrow"/>
         </li>
         <li>
             <StyledSectionMainSubtitles>Przedsiębiorczość</StyledSectionMainSubtitles>
             <StyledSectionSecondSubTitles>Mentoring・Relacje wspólnicze・Nowy biznes</StyledSectionSecondSubTitles>
-            <a href="/"><img src={arrow} alt="arrow"/></a>
+            <Icon iconId="arrow"/>
         </li>
     </ul>
         </section>
