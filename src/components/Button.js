@@ -14,7 +14,9 @@ font-size: 18px;
 
 const StyledButton = styled.button`
   ${commonStyles}
+  animation: glowing 2300ms infinite;
 `;
+
 const StyledLinkButton = styled.a`
   ${commonStyles}
   @keyframes glowing {
@@ -33,14 +35,17 @@ const StyledLinkButton = styled.a`
   }
   animation: glowing 2300ms infinite;
 `;
-export function Button({ type, label, handleClick }) {
+
+export function Button({ isDisabled, type, label, handleClick }) {
+  const disabled = isDisabled === undefined ? false : isDisabled;
   return (
-    <StyledButton type={type ?? "button"} onClick={handleClick}>
+    <StyledButton type={type ? type : "button"} onClick={handleClick}>
       {label}
     </StyledButton>
   );
 }
-export function Link({ path, label, handleClick }) {
+export function Link({ isDisabled, path, label, handleClick }) {
+  const disabled = isDisabled === undefined ? false : isDisabled;
   return (
     <StyledLinkButton type={path ?? ""} onClick={handleClick}>
       {label}
