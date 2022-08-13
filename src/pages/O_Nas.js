@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../components/Button";
-import {InputText} from "../components/Input";
+import { InputText } from "../components/Input";
 
 export function O_Nas() {
   const API_KEY = "563492ad6f91700001000001e699530e579f4688bb7809ad69f88cb3";
@@ -10,8 +10,10 @@ export function O_Nas() {
   const [currentState, setCurrentState] = useState("start");
   // const [userName, setUserName] = useState("Dima");
   const [isOnline, setIsOnline] = useState(true);
+
   const [search, setSearch] = useState(null);
   const [kittens, setKittens] = useState([]);
+
   const options = {
     headers: {
       Authorization: API_KEY,
@@ -32,6 +34,7 @@ export function O_Nas() {
   };
 
   const searchValue = () => {
+    //метод который вызываем по кнопке сабмит
     if (search) {
       let params = `?query=${search}&orientation=portrait&per_page=3`;
       const url = BASE_URL + endpoint + params;

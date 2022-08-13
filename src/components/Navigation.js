@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AppContext } from "../App";
 
 const List = styled.ul`
   display: flex;
@@ -17,7 +19,8 @@ const Item = styled.li`
   }
 `;
 
-function Navigation({ x }) {
+function Navigation() {
+  const [navLinks] = useState([]);
   const handleItemClick = () => {};
   const handleLinkClick = (e) => {};
   const handleLinkMouseEnter = (e) => {};
@@ -25,8 +28,8 @@ function Navigation({ x }) {
   return (
     <nav>
       <List>
-        {x &&
-          x.map(({ id, label, path }) => (
+        {navLinks &&
+          navLinks.map(({ id, label, path }) => (
             <Item key={id} onClick={handleItemClick}>
               <Link
                 to={`/${path}`}

@@ -15,12 +15,12 @@ const HeaderContainer = styled(Container)`
   align-items: center;
 `;
 
-function Header({ links }) {
+function Header() {
   return (
     <StyledHeader>
       <HeaderContainer>
         <Logo />
-        <Navigation x={links} />
+        <Navigation />
       </HeaderContainer>
     </StyledHeader>
   );
