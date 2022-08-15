@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AppContext } from "../App";
+import { AppContext } from "../contexts/AppContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const List = styled.ul`
   display: flex;
@@ -20,7 +21,8 @@ const Item = styled.li`
 `;
 
 function Navigation() {
-  const [navLinks] = useState([]);
+  const { navLinks } = useContext(AppContext);
+  const { colors, styles } = useContext(ThemeContext);
   const handleItemClick = () => {};
   const handleLinkClick = (e) => {};
   const handleLinkMouseEnter = (e) => {};
@@ -30,7 +32,7 @@ function Navigation() {
       <List>
         {navLinks &&
           navLinks.map(({ id, label, path }) => (
-            <Item key={id} onClick={handleItemClick}>
+            <Item key={id} onClick={handleItemClick} contextStyles={styles}>
               <Link
                 to={`/${path}`}
                 onClick={handleLinkClick}

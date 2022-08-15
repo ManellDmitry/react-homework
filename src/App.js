@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "./contexts/ThemeContext";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -12,6 +13,7 @@ import { Kontakt } from "./pages/Kontakt";
 import { O_Nas } from "./pages/O_Nas";
 import SectionONas from "./components/SectionO_nas";
 import { AppContext } from "./contexts/AppContext";
+import { Allstyles } from "./layout/styles";
 
 const navLinks = [
   { id: "1", label: "KNOW-HOW", path: "know-how" },
@@ -27,16 +29,22 @@ const PageWrapper = styled.div`
 `;
 
 function App() {
-  const appGlobalState = useContext(AppContext);
-  const [currentAppContext, setCurrentAppContext] = useState();
+  const initialAppContext = useContext(AppContext);
+  const [currentAppContext, setCurrentAppContext] = useState(initialAppContext);
+
   useEffect(() => {
     const context = setAppContext();
-  }, [appGlobalState, setAppContext()]);
+    setCurrentAppContext((prev) => {
+      return {
+        ...prev,
+        ...context,
+      };
+    });
+  }, []);
 
   function setAppContext() {
-    appGlobalState.navLinks = navLinks;
     return {
-      ...appGlobalState,
+      ...initialAppContext,
       navLinks,
       user: {
         name: "Voldemort",
@@ -45,23 +53,25 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={appGlobalState}>
-      <PageWrapper>
-        <Header links={navLinks} />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="know-how" element={<Know_How />} />
-            <Route path="o-nas" element={<O_Nas />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="kontakt" element={<Kontakt />} />
-          </Routes>
-          <Hero />
-          <Section />
-          <SectionONas />
-          <Footer name="Dima" />
-        </main>
-      </PageWrapper>
+    <AppContext.Provider value={currentAppContext}>
+      <ThemeContext.Provider value={Allstyles}>
+        <PageWrapper>
+          <Header links={navLinks} />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="know-how" element={<Know_How />} />
+              <Route path="o-nas" element={<O_Nas />} />
+              <Route path="blog" element={<Blog />} />
+              <Route path="kontakt" element={<Kontakt />} />
+            </Routes>
+            <Hero />
+            <Section />
+            <SectionONas />
+            <Footer name="Dima" />
+          </main>
+        </PageWrapper>
+      </ThemeContext.Provider>
     </AppContext.Provider>
   );
 }
