@@ -18,6 +18,9 @@ const Item = styled.li`
     color: aqua;
     transition: 1s ease;
   }
+  @media screen and (min-width: 320px) {
+    margin-right: 6em;
+  }
 `;
 
 function Navigation() {

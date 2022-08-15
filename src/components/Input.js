@@ -18,8 +18,15 @@ const StyledInput = styled.input`
   .error {
     border: 1px solid red;
   }
+  @media screen and (max-width: 320px) {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 1rem;
+  }
 `;
-export  function InputText({ type, placeholder, handleInputChange, name }) {
+export function InputText({ type, placeholder, handleInputChange, name }) {
   return (
     <StyledInput
       type={type ? type : "text"}
