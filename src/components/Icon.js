@@ -1,10 +1,10 @@
 import sprite from "../images/sprite.svg";
 
-export function Icon({ iconId, iconColor, width, height }) {
+export function Icon({ iconId, iconColor, width, height, iconClass }) {
   return (
     <>
       {iconId && (
-        <svg fill={iconColor} width={width} height={height}>
+        <svg fill={iconColor} width={width} height={height} className={`icon icon-${iconId} ${iconClass}`}>
           <use xlinkHref={`${sprite}#${iconId}`}></use>
         </svg>
       )}
@@ -12,7 +12,7 @@ export function Icon({ iconId, iconColor, width, height }) {
   );
 }
 Icon.defaultProps = {
-  iconColor: "white",
-  width: "43px",
-  height: "43px",
+  iconColor: "grey",
+  width: "24px",
+  height: "24px",
 };

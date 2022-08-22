@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import Hero from "../components/Hero"
+import withLeftSidebar from "../hocs/withLeftSidebar";
 
-const HiddenTitle= styled.h1`
-visibility: hidden;
-`
-export function Home() {
-  return <HiddenTitle>Home</HiddenTitle>;
+ function Home(){
+    return(
+        <Hero/>
+    )
 }
+export default withLeftSidebar(Home)

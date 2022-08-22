@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Link } from "../components/Button";
 import { Container } from "../components/styledComponents";
+import withLeftSidebar from "../hocs/withLeftSidebar";
 
-export function Kontakt() {
+ function Kontakt() {
   const handleButtonClick = () => {};
   const handleLinkButtonClick = () => {};
   return (
@@ -14,3 +15,5 @@ export function Kontakt() {
     </div>
   );
 }
+
+export default withLeftSidebar(Kontakt)

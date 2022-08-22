@@ -3,6 +3,7 @@ import { InputText } from "../components/Input";
 import { Button } from "../components/Button";
 import { Container } from "../components/styledComponents";
 import { setValidation } from "../helpers/validation";
+import withLeftSidebar from "../hocs/withLeftSidebar";
 
 const errorMap = {
   name: true,
@@ -12,7 +13,7 @@ const errorMap = {
   confirmedPassword: true,
 };
 
-export function Know_How() {
+ function Know_How() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -142,3 +143,5 @@ export function Know_How() {
     </>
   );
 }
+
+export default withLeftSidebar(Know_How)

@@ -15,13 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 ul {
   list-style: none;
 }
+
 img {
   display: block;
   object-fit: contain;
 }
+
 a,
 p,
 h1,
@@ -31,28 +34,56 @@ h3 {
   color: inherit;
   color: #fff;
 }
+svg{
+  fill: #fff;
+}
+
 a {
   display: inline-block;
 }
+
 body {
   background: #000;
 }
+
 address {
   font-style: normal;
   font-size: 20px;
 }
+
 .hero_styled_posttitle {
   font-size: 20px;
   font-weight: 400;
   width: 509px;
   line-height: 1, 371;
 }
+
 .hero_posttitle_span {
   font-size: 11px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.4);
 }
+
 .section_help {
   padding-top: 86px;
   padding-bottom: 163px;
+}
+/* Basic styling */
+
+:root {
+  /* Colors */
+  --black: #09090c;
+  --grey: #a4b2bc;
+  --white: #fff;
+  --background: rgba(137, 171, 245, 0.37);
+}
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
