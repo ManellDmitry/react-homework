@@ -23,7 +23,7 @@ const Button = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 0.5rem  0 0.5rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ const Button = styled.button`
 const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.5rem;
-  height: 80vh;
+  height: 65vh;
   margin-top: 1rem;
   border-radius: 0 30px 30px 0;
   padding: 1rem 0;
@@ -206,7 +206,6 @@ const Sidebar = () => {
             );
           })}
         </SlickBar>
-
         <Profile clicked={profileClick}>
           <img
             onClick={() => handleProfileClick()}
@@ -222,7 +221,6 @@ const Sidebar = () => {
               </h4>
               <a href="/#">view&nbsp;profile</a>
             </Name>
-
             <Logout>
               <Icon iconId="logout" iconColor="white" />
             </Logout>

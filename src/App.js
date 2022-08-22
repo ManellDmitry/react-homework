@@ -65,7 +65,7 @@ function App() {
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/login" element={<Login />} />
             </Routes>
-            <Hero />
+            {/* <Hero /> */}
             <Section />
             <SectionONas />
             <Footer name="Dima" />

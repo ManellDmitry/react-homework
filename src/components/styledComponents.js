@@ -4,13 +4,13 @@ export const Container = styled.div`
   min-width: 320px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding:0 10px 0 4rem;
   @media screen and (min-width: 679px) {
     min-width: 679px;
-    padding: 20px 60px;
+    padding: 0 20px 0 4rem;
   }
   @media screen and (min-width: 1440px) {
     min-width: 1440px;
-    padding: 34px 84px;
+    padding: 0 30px 0 4rem;
   }
 `;
