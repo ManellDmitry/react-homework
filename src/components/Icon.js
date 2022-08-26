@@ -4,7 +4,12 @@ export function Icon({ iconId, iconColor, width, height, iconClass }) {
   return (
     <>
       {iconId && (
-        <svg fill={iconColor} width={width} height={height} className={`icon icon-${iconId} ${iconClass}`}>
+        <svg
+          fill={iconColor}
+          width={width}
+          height={height}
+          className={`icon icon-${iconId} ${iconClass}`}
+        >
           <use xlinkHref={`${sprite}#${iconId}`}></use>
         </svg>
       )}

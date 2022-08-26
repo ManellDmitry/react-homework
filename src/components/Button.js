@@ -39,7 +39,14 @@ const StyledLinkButton = styled.a`
 export function Button({ isDisabled, type, label, handleClick }) {
   const disabled = isDisabled === undefined ? false : isDisabled;
   return (
-    <StyledButton disabled={disabled} type={type ? type : "button"} onClick={handleClick}>
+    <StyledButton
+      disabled={disabled}
+      type={type ? type : "button"}
+      onClick={() => {
+        console.log("Click");
+        handleClick();
+      }}
+    >
       {label}
     </StyledButton>
   );
@@ -47,7 +54,11 @@ export function Button({ isDisabled, type, label, handleClick }) {
 export function Link({ isDisabled, path, label, handleClick }) {
   const disabled = isDisabled === undefined ? false : isDisabled;
   return (
-    <StyledLinkButton disabled={disabled} type={path ?? ""} onClick={handleClick}>
+    <StyledLinkButton
+      disabled={disabled}
+      type={path ?? ""}
+      onClick={handleClick}
+    >
       {label}
     </StyledLinkButton>
   );

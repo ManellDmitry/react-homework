@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 import { InputText } from "../components/Input";
 import withLeftSidebar from "../hocs/withLeftSidebar";
 
- function O_Nas() {
+function O_Nas() {
   const API_KEY = "563492ad6f91700001000001e699530e579f4688bb7809ad69f88cb3";
   const BASE_URL = "https://api.pexels.com/v1/";
   const endpoint = "search";
@@ -12,7 +12,7 @@ import withLeftSidebar from "../hocs/withLeftSidebar";
   // const [userName, setUserName] = useState("Dima");
   const [isOnline, setIsOnline] = useState(true);
 
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState("");
   const [kittens, setKittens] = useState([]);
 
   const options = {
@@ -34,13 +34,16 @@ import withLeftSidebar from "../hocs/withLeftSidebar";
     setIsOnline(!isOnline);
   };
 
-  const searchValue = () => {
+  const getData = () => {
     //метод который вызываем по кнопке сабмит
+    console.log("search", search);
     if (search) {
+      // console.log(search);
       let params = `?query=${search}&orientation=portrait&per_page=3`;
       const url = BASE_URL + endpoint + params;
       fetch(url, options)
         .then((response) => {
+          console.log(response);
           return response.json();
         })
         .then((data) => {
@@ -60,9 +63,9 @@ import withLeftSidebar from "../hocs/withLeftSidebar";
     <>
       <InputText
         placeholder="enter the value"
-        handleChange={handleInputChange}
+        handleInputChange={handleInputChange}
       />
-      <Button type="submit" label="search" handleClick={searchValue} />
+      <Button type="submit" label="search" handleClick={getData} />
 
       <ul>
         {kittens.map(({ src: { tiny }, alt, id }) => {
@@ -77,4 +80,4 @@ import withLeftSidebar from "../hocs/withLeftSidebar";
   );
 }
 
-export default withLeftSidebar(O_Nas)
+export default withLeftSidebar(O_Nas);
