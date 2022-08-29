@@ -46,26 +46,48 @@ const data = [
     items: ["Mentoring", "Relacje wspólnicze", "Nowy biznes"],
   },
 ];
+const StyledColumnList = styled.ul`
+  display: flex;
+  flex-flow: column;
+`;
+
+const StyledRowList = styled.ul`
+  display: flex;
+`;
+
+const StyledRowItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .item {
+    max-width: 396px;
+    width: 100%;
+  }
+`;
+
 export function Section() {
   return (
     <SectionContainer>
       <section className="section_help">
         <StyledSectionTitle>Jak możemy pomóc</StyledSectionTitle>
-        <ul>
+        <StyledColumnList>
           {data.map(({ id, title, items }) => {
             return (
-              <li key={id}>
-                <StyledSectionMainSubtitle>{title}</StyledSectionMainSubtitle>
-                <ul>
+              <StyledRowItem key={id}>
+                <StyledSectionMainSubtitle className="item">
+                  {title}
+                </StyledSectionMainSubtitle>
+                <StyledRowList>
                   {items.map((item) => {
-                    return <li>{item}</li>;
+                    return <li key={item}>{item}</li>;
                   })}
-                </ul>
+                </StyledRowList>
                 <Icon iconId="arrow" />
-              </li>
+              </StyledRowItem>
             );
           })}
-        </ul>
+        </StyledColumnList>
       </section>
     </SectionContainer>
   );

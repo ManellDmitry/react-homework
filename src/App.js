@@ -66,7 +66,7 @@ function App() {
             </Routes>
             <Section />
             <SectionONas />
-            <Footer name="Dima" />
+            {/* <Footer name="Dima" /> */}
           </main>
         </PageWrapper>
       </ThemeContext.Provider>

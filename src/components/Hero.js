@@ -11,14 +11,14 @@ const HeroContainer = styled(Container)`
 `;
 
 const MainOverhead = styled.p`
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-style: normal;
   color: #999999;
   margin-left: 170px;
 `;
 
 const StyledMainTitle = styled.h1`
-  font-size: 114px;
+  font-size: 7rem;
   margin-left: 130px;
   .title {
     margin-left: 194px;
