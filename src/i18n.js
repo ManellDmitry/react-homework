@@ -16,6 +16,9 @@ const locales = {
 };
 
 export function getLocalesByLang(lang) {
+  if (lang === "ua") {
+    lang = "uk";
+  }
   return locales[lang];
 }
 const result = getLocalesByLang("uk");
