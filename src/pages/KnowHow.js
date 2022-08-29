@@ -13,7 +13,7 @@ const errorMap = {
   confirmedPassword: true,
 };
 
- function Know_How() {
+function KnowHow() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -135,13 +135,16 @@ const errorMap = {
             type="password"
             handleChange={handleInputChange}
           />
-          <Button type="submit"  label="register"
-          handleClick={handleSubmit}
-          isDisabled={isDisabledSubmit} />
+          <Button
+            type="submit"
+            label="register"
+            handleClick={handleSubmit}
+            isDisabled={isDisabledSubmit}
+          />
         </form>
       </Container>
     </>
   );
 }
 
-export default withLeftSidebar(Know_How)
+export default withLeftSidebar(KnowHow);

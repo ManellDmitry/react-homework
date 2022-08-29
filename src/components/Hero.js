@@ -24,6 +24,11 @@ const StyledMainTitle = styled.h1`
     margin-left: 194px;
     display: block;
   }
+  @media screen and (max-width: 320px) {
+    font-size: 2rem;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 `;
 
 const TitleWrapper = styled.div`

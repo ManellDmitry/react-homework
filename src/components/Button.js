@@ -15,10 +15,16 @@ font-size: 18px;
 const StyledButton = styled.button`
   ${commonStyles}
   animation: glowing 2300ms infinite;
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
 `;
 
 const StyledLinkButton = styled.a`
   ${commonStyles}
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
   @keyframes glowing {
     0% {
       background-color: #2ba805;

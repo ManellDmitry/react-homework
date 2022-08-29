@@ -3,15 +3,13 @@ import { Button } from "../components/Button";
 import { InputText } from "../components/Input";
 import withLeftSidebar from "../hocs/withLeftSidebar";
 
-function O_Nas() {
+function AboutUs() {
   const API_KEY = "563492ad6f91700001000001e699530e579f4688bb7809ad69f88cb3";
   const BASE_URL = "https://api.pexels.com/v1/";
   const endpoint = "search";
 
   const [currentState, setCurrentState] = useState("start");
-  // const [userName, setUserName] = useState("Dima");
   const [isOnline, setIsOnline] = useState(true);
-
   const [search, setSearch] = useState("");
   const [kittens, setKittens] = useState([]);
 
@@ -80,4 +78,4 @@ function O_Nas() {
   );
 }
 
-export default withLeftSidebar(O_Nas);
+export default withLeftSidebar(AboutUs);

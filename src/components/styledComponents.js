@@ -4,7 +4,10 @@ export const Container = styled.div`
   min-width: 320px;
   width: 100%;
   margin: 0 auto;
-  padding:0 10px 0 4rem;
+  padding: 0 10px 0 4rem;
+  @media screen and (max-width: 320px) {
+    width: 100%;
+  }
   @media screen and (min-width: 679px) {
     min-width: 679px;
     padding: 0 20px 0 4rem;
